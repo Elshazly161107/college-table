@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>جدول الفرقة الأولى كلية حاسبات ومعلومات</title>
+        <link rel="icon" href="college-logo.svg">
+        <link rel="stylesheet" href="all.min.css">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <header>
+            <img src="college-logo.svg" alt>
+            <h1>جدول الفرقة الأولى كلية الحاسبات والذكاء الاصطناعي بسوهاج</h1>
+            <img src="college-logo.svg" alt>
+        </header>
+        <section>
+            <div class="select-search-type">
+                <button id="select-num">سكشن رقم <span></span></button>
+            </div>
+            <form>
+                <input class="active" id="search-by-num" type="number"
+                    placeholder="أدخل رقم السكشن">
+            </form>
+            <table>
+                <thead>
+                    <td>اليوم</td>
+                    <td>المقرر</td>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>السبت</td>
+                        <td class="days" id="saturday"></td>
+                    </tr>
+                    <tr>
+                        <td>الأحد</td>
+                        <td class="days" id="sunday"></td>
+                    </tr>
+                    <tr>
+                        <td>الاثنين</td>
+                        <td class="days" id="monday"></td>
+                    </tr>
+                    <tr>
+                        <td>الثلاثاء</td>
+                        <td class="days" id="tuseday"></td>
+                    </tr>
+                    <tr>
+                        <td>الأربعاء</td>
+                        <td class="days" id="wednesday"></td>
+                    </tr>
+                    <tr>
+                        <td>الخميس</td>
+                        <td class="days" id="thursday"></td>
+                    </tr>
+                    <tr>
+                        <td>الجمعه</td>
+                        <td class="days"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="btns">
+                <button id="search">ابحث</button>
+                <button type="button" id="download-pdf" class="pdf">تحميل الجدول
+                    <i
+                        class="fa-solid fa-file-arrow-down"></i></button>
+            </div>
+        </section>
+        <footer>made with love by elshazly &hearts;</footer>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    </body>
+    <script src="data.js"></script>
+    <script src="index.js"></script>
+</html>
