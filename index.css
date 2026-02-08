@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Beiruti:wght@200..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-transform: capitalize;
+    font-family: Alexandria;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* Chrome, Edge, Safari */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+:root {
+    --bg: #1c222e;
+    --card: #151a24;
+
+    --blue: #3b82f6;
+    --blue-dark: #1e40af;
+
+    --text: #e5e7eb;
+    --text-muted: #9ca3af;
+
+    --border: #2a3244;
+
+    --input-bg: #0f172a;
+
+    --btn: #2563eb;
+    --btn-hover: #1d4ed8;
+    --btn-trans: #1d4ed899;
+
+    --span1: #cf1f00;
+    --span2: #42cf00;
+    --span3: #8d00cf;
+}
+
+img {
+    height: 60px;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background: var(--bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background: var(--card);
+    width: 100%;
+    padding: 10px;
+}
+
+header h1 {
+    text-align: center;
+    color: var(--text);
+    line-height: 1.5;
+    font-size: 30px;
+}
+
+@media (max-width: 800px) {
+    header img {
+        display: none;
+    }
+
+    header h1 {
+        font-weight: 500;
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    header img {
+        display: none;
+    }
+
+    header h1 {
+        font-weight: 400;
+        font-size: 20px;
+    }
+}
+
+section {
+    flex-grow: 1;
+    width: calc(100% - 20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    background: var(--card);
+    padding: 10px;
+}
+
+section .select-search-type {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+section .select-search-type button {
+    background: var(--blue-dark);
+    border: none;
+    color: var(--text);
+    padding: 15px;
+    flex-grow: 1;
+    font-size: 20px;
+    cursor: default !important;
+}
+
+section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+section form input {
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    width: 50%;
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    section form input {
+        width: 100%;
+    }
+}
+
+section table {
+    width: 100%;
+    flex-grow: 1;
+    border-collapse: separate;
+    border-spacing: 3px;
+    display: none;
+    overflow: auto;
+}
+
+section table.active {
+    display: table;
+}
+
+section table td {
+    background: var(--text-muted);
+    text-align: center;
+    padding: 10px;
+}
+
+section table td p {
+    text-align: right;
+    padding: 10px 5px;
+    color: var(--text);
+    line-height: 1.5;
+}
+
+section table td p:not(:last-of-type) {
+    margin-bottom: 5px;
+}
+
+section table td p:nth-last-of-type(n) {
+    background: var(--blue);
+}
+
+section table td p:nth-last-of-type(2n) {
+    background: var(--blue-dark);
+}
+
+section .btns {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+section .btns>button {
+    width: 40%;
+    font-size: 15px;
+    border: none;
+    color: var(--text);
+    padding: 10px;
+    background: var(--btn);
+    border-radius: 50px;
+}
+
+section .btns .pdf {
+    background: var(--span1);
+}
+
+section .btns>button:hover {
+    filter: grayscale(50%);
+}
+
+footer {
+    width: 100%;
+    direction: ltr;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    color: var(--text);
+    background: var(--card);
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+/*  */
+
+.pdf-table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    font-size: 15px;
+    direction: rtl;
+}
+
+.pdf-table td,
+.pdf-table th {
+    border: 1px solid #000 !important;
+    padding: 10px;
+    white-space: normal !important;
+}
+
+.pdf-table thead {
+    display: none !important;
+}
+
+.pdf-table p {
+    padding: 10px;
+}
+
+.pdf-table p:nth-of-type(2n) {
+    background: #b3b3b3;
+}
+
+.pdf-wrapper {
+    padding: 20px;
+}
