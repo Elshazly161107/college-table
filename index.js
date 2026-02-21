@@ -105,3 +105,15 @@ downloadBtn.addEventListener("click", function () {
       wrapper.remove(); // تنظيف
     });
 });
+
+let profit = document.querySelector(".profit-mohamed");
+let profitBtn = document.querySelector(".profit-mohamed button");
+
+if (sessionStorage.getItem("introClosed")) {
+  profit.classList.add("close");
+}
+
+profitBtn.addEventListener("click", function () {
+  profit.classList.add("close");
+  sessionStorage.setItem("introClosed", "true");
+});

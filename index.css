@@ -265,3 +265,51 @@ footer {
 .pdf-wrapper {
     padding: 20px;
 }
+
+.profit-mohamed {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(var(--blue-dark), var(--card));
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    transform: scale(1);
+}
+
+@keyframes close-profit {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+.profit-mohamed.close {
+    animation: close-profit 0.1s ease;
+    transform: scale(0);
+}
+
+.profit-mohamed h1 {
+    color: var(--text);
+    font-weight: 600;
+    font-size: 45px;
+}
+
+.profit-mohamed button {
+    padding: 10px 30px;
+    border-radius: 50px;
+    font-size: 20px;
+    border: none;
+    background: var(--btn);
+    color: var(--text);
+    transition: 0.15s ease;
+}
+
+.profit-mohamed button:hover {
+    filter: drop-shadow(0 0 10px var(--text));
+}
