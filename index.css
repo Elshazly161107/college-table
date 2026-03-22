@@ -138,8 +138,14 @@ section form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     width: 100%;
+    height: 44px;
+    overflow: hidden;
+}
+
+section form.open {
+    height: fit-content;
 }
 
 section form input {
@@ -155,6 +161,50 @@ section form input {
     section form input {
         width: 100%;
     }
+}
+
+section form .sections-lists {
+    width: 50%;
+    padding: 10px;
+    background: var(--span1);
+}
+
+@media (max-width: 800px) {
+    section form .sections-lists {
+        width: 100%;
+    }
+}
+
+section form .sections-lists a {
+    font-size: 12px;
+    border: none;
+    color: var(--text);
+    padding: 10px;
+    background: var(--btn);
+    border-radius: 50px;
+    text-decoration: none;
+}
+
+section form a:hover {
+    filter: grayscale(50%);
+}
+
+section form .sections-lists span {
+    font-size: 13.5px;
+    text-align: center;
+    width: 100%;
+    display: block;
+    margin: 10px 0;
+    color: var(--text);
+    font-weight: 900;
+}
+
+section form p {
+    text-align: center;
+    color: var(--text);
+    font-size: 12px;
+    line-height: 1.7;
+    overflow: hidden;
 }
 
 section table {
@@ -308,6 +358,17 @@ footer {
     background: var(--btn);
     color: var(--text);
     transition: 0.15s ease;
+    animation: profit-mohamed-btn 0.5s infinite;
+}
+
+@keyframes profit-mohamed-btn {
+    0% {
+        scale: 1;
+    }
+
+    100% {
+        scale: 1.02;
+    }
 }
 
 .profit-mohamed button:hover {
