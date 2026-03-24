@@ -1,9 +1,9 @@
 // عناصر DOM
-const searchBtn = document.getElementById("search");
-const sectionIn = document.getElementById("search-by-num");
-const tableDiv = document.querySelector("table");
-const tableDays = document.querySelectorAll(".days");
-const theSpan = document.querySelector(".select-search-type button span");
+let searchBtn = document.getElementById("search");
+let sectionIn = document.getElementById("search-by-num");
+let tableDiv = document.querySelector("table");
+let tableDays = document.querySelectorAll(".days");
+let theSpan = document.querySelector(".select-search-type button span");
 
 let currentData = [];
 let btnText = "ابحث";
@@ -44,9 +44,9 @@ function populateTable() {
   tableDays.forEach((day) => (day.innerHTML = ""));
 
   currentData.forEach((item) => {
-    const dayElement = document.getElementById(item.day);
+    let dayElement = document.getElementById(item.day);
     if (dayElement) {
-      const p = document.createElement("p");
+      let p = document.createElement("p");
       p.textContent = `${item.sub} | ${item.time} | ${item.place}`; // ممكن تضيف المكان لو حبيت
       dayElement.appendChild(p);
     }
@@ -78,22 +78,22 @@ searchBtn.addEventListener("click", () => {
 
 let downloadBtn = document.getElementById("download-pdf");
 downloadBtn.addEventListener("click", function () {
-  const originalTable = document.querySelector("table");
+  let originalTable = document.querySelector("table");
 
   // نسخ الجدول
-  const tableClone = originalTable.cloneNode(true);
+  let tableClone = originalTable.cloneNode(true);
   tableClone.classList.add("pdf-table");
 
   // wrapper خاص بالـ PDF
-  const wrapper = document.createElement("div");
+  let wrapper = document.createElement("div");
   wrapper.classList.add("pdf-wrapper");
   wrapper.appendChild(tableClone);
 
   document.body.appendChild(wrapper);
 
-  const sectionName = sectionIn.value ? sectionIn.value : "عام";
+  let sectionName = sectionIn.value ? sectionIn.value : "عام";
 
-  const options = {
+  let options = {
     margin: 1,
     filename: `جدول سكشن ${sectionName}.pdf`,
     html2canvas: {
