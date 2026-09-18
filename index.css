@@ -288,6 +288,7 @@ footer {
 footer a {
     color: var(--blue);
     margin: 0 5px;
+
 }
 
 footer a:hover {
