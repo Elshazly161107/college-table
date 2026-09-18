@@ -22,7 +22,7 @@ let sectionInP = document.querySelector("section form");
 //   sectionInP.classList.add("open");
 // });
 
-//
+// //
 
 // --- فلترة البيانات حسب القسم ---
 function filterData(data) {
