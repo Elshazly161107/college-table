@@ -16,7 +16,7 @@ function toggleTable() {
 
 // Msg hidden
 
-let sectionInP = document.querySelector("section form");
+// let sectionInP = document.querySelector("section form");
 
 // sectionIn.addEventListener("click", function () {
 //   sectionInP.classList.add("open");
@@ -69,7 +69,7 @@ function tdOpacity() {
 
 // --- حدث الضغط على زر البحث ---
 searchBtn.addEventListener("click", () => {
-  sectionInP.classList.remove("open");
+  // sectionInP.classList.remove("open");
   toggleTable();
   filterData(data); // 'data' موجودة في مكان آخر
   populateTable();
