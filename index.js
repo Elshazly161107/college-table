@@ -18,9 +18,9 @@ function toggleTable() {
 
 let sectionInP = document.querySelector("section form");
 
-sectionIn.addEventListener("click", function () {
-  sectionInP.classList.add("open");
-});
+// sectionIn.addEventListener("click", function () {
+//   sectionInP.classList.add("open");
+// });
 
 //
 
