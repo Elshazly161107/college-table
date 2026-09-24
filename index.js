@@ -128,3 +128,4 @@ profitBtn.addEventListener("click", function () {
   profit.classList.add("close");
   sessionStorage.setItem("introClosed", "true");
 });
+//
